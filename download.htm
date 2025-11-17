@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Hill Primary School – Ssagala</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7fdf7;
+      color: #333;
+    }
+    /* Header */
+    header {
+      background-color: #008000;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #badge {
+      height: 80px;
+      width: auto;
+      border-radius: 10px;
+    }
+    /* Desktop nav */
+    nav.desktop {
+      display: flex;
+      justify-content: right;
+      gap: 30px;
+      font-size: larger;
+    }
+    nav.desktop a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #008000;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    #menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+    }
+    /* Mobile nav */
+    nav.mobile {
+      position: fixed;
+      top: 60px; 
+      right: -250px; 
+      width: 250px;
+      background-color: #008000;
+      flex-direction: column;
+      padding: 10px 20px;
+      gap: 10px;
+      box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+      border-radius: 0 0 0 10px;
+      z-index: 1500;
+      display: none;
+      transition: right 0.3s ease;
+    }
+
+    nav.mobile.show {
+      display: flex;
+      right: 0;
+    }
+
+    nav.mobile a {
+      padding: 10px 15px;
+      text-align: right;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #008000;
+    }
+
+    .header-space {
+      height: 150px; /* space for fixed header */
+    }
+    /* Footer */
+    footer {
+      background-color: #008000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #badge {
+        display: none;
+      }
+      nav.desktop {
+        display: none;
+      }
+      #menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="logo-name">
+      <img src="Badge.png" alt="School Badge" id="badge">
+      <h1 style="margin:0; font-size:1.5em; font-weight:bold;">Top Hill Primary School<br><span style="font-size:0.9em;">Ssagala – Kyotera</span></h1>
+    </div>
+    <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <!-- Desktop nav -->
+    <nav class="desktop">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <!-- Mobile nav -->
+  <nav id="nav-links" class="mobile">
+    <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="location.html">Location</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<div class="header-space"></div>
+<!-- Hero Section -->
+<section style="text-align:center; padding:60px 20px;">
+  <h1 style="font-size:2.5em; margin-bottom:10px; color:#008000;">Welcome to Top Hill Primary School</h1>
+  <p style="font-size:1.2em; color:#555;">Empowering young minds for a brighter future</p>
+  <a href="About.html" style="display:inline-block; margin-top:20px; background-color:#008000; color:white; padding:10px 20px; text-decoration:none; border-radius:5px;">Learn More</a>
+</section>
+<!-- Mission and Vision -->
+<section>
+  <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; font-size:larger; margin:30px 10px;">
+    <div style="flex:1 1 300px; border:2px solid #008000; border-radius:10px; padding:20px; text-align:center; background-color:#ffffff; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+      <b style="color:#008000;">OUR VISION</b><br>
+      Provision of Quality Education
+    </div>
+    <div style="flex:1 1 300px; border:2px solid #008000; border-radius:10px; padding:20px; text-align:center; background-color:#ffffff; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+      <b style="color:#008000;">OUR MISSION</b><br>
+      To produce productive citizens
+    </div>
+  </div>
+</section>
+<!-- Director’s Message -->
+<section>
+  <div style="border:2px solid #008000; border-radius:10px; padding:20px; display:flex; align-items:center; justify-content:center; margin:30px 10px; flex-wrap:wrap; background-color:#f9fff9; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+    <div style="flex:0 0 180px; text-align:center;">
+      <img src="director.jpg" alt="Director Photo" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
+    </div>
+    <div style="flex:1; min-width:250px; margin-left:20px;">
+      <h3 style="color:#008000; margin:0;">Message from the Director</h3>
+      <p style="margin-top:10px;">
+        Welcome to <strong>Top Hill Primary School – Ssagala</strong>.  
+        We believe in nurturing excellence and shaping a bright future for every learner.  
+        Our commitment to discipline, hard work, and innovation defines who we are.
+      </p>
+      <p style="font-weight:bold; color:#1e88e5; margin-top:10px;">– Kigozi Zakaria, Director</p>
+    </div>
+  </div>
+</section>
+<p style="font-size: larger; text-align: center;"><strong>"IN EDUCATION WE INVEST"</strong></p>
+<div class="gallery">
+  <img src="boys.jpg">
+  <img src="girls.jpg">
+</div>
+<!-- Footer -->
+<footer>
+  <p>
+    For any inquiries regarding Top Hill Primary School, contact the School Administration on:<br>
+    <img src="whats app logo.png" alt="WhatsApp" width="20" height="20"> 0701498154 / 0753894090<br>
+    <img src="email(0).png" alt="Email" width="20"> tophillprimary720@gmail.com
+  </p>
+  &copy; 2025 Top Hill Primary School | All rights reserved
+</footer>
+<script>
+function toggleMenu(){
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("show");
+}
+</script>
+</body>
+
+</html>

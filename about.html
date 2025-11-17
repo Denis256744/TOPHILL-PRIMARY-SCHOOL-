@@ -1,0 +1,299 @@
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Top Hill Primary School – Ssagala</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7fdf7;
+      color: #333;
+      flex-wrap: wrap;
+    }
+
+    /* Header */
+    header {
+      background-color: #008000;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #badge {
+      height: 80px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    /* Desktop nav */
+    nav.desktop {
+      display: flex;
+      justify-content: right;
+      gap: 30px;
+      font-size: larger;
+    }
+
+    nav.desktop a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #008000;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    #menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+    }
+
+    /* Mobile nav */
+    nav.mobile {
+      position: fixed;
+      top: 60px; /* below header */
+      right: -250px; /* hidden offscreen */
+      width: 250px;
+      background-color: #008000;
+      flex-direction: column;
+      padding: 10px 20px;
+      gap: 10px;
+      box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+      border-radius: 0 0 0 10px;
+      z-index: 1500;
+      display: none;
+      transition: right 0.3s ease;
+    }
+
+    nav.mobile.show {
+      display: flex;
+      right: 0;
+    }
+
+    nav.mobile a {
+      padding: 10px 15px;
+      text-align: right;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #008000;
+    }
+
+    .header-space {
+      height: 150px;
+    }
+
+    /* Sections styling */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      color: #008000;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .card {
+      border: 2px solid #008000;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      flex: 1 1 250px;
+    }
+
+    .card h3 {
+      color: #008000;
+      margin-bottom: 10px;
+    }
+
+    .values-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #008000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #badge {
+        display: none; /* hide badge on small screens */
+      }
+      nav.desktop {
+        display: none; /* desktop nav hidden on mobile */
+      }
+      #menu-icon {
+        display: block; /* hamburger visible */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-name">
+        <img src="Badge.png" alt="School Badge" id="badge">
+        <h1 style="margin:0; font-size:1.5em; font-weight:bold;">Top Hill Primary School<br><span style="font-size:0.9em;">Ssagala – Kyotera</span></h1>
+      </div>
+      <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <!-- Desktop nav -->
+      <nav class="desktop">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="nav-links" class="mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="header-space"></div>
+
+  <!-- Hero Section -->
+  <section style="text-align:center; background-color:#e6f2e6;">
+    <h1 style="font-size:2em; color:#008000;">About Top Hill Primary School</h1>
+    <p style="font-size:1.1em; max-width:700px; margin:10px auto;">
+      Top Hill Primary School – Ssagala is dedicated to providing a nurturing environment where students excel academically, socially, and morally.
+    </p>
+  </section>
+
+  <!-- History Section -->
+  <section>
+    <h2>Our History</h2>
+    <p>
+      Founded in 1986, Top Hill Primary School has grown into a leading institution in Kyotera District. With a focus on discipline, innovation, and holistic development, we have nurtured hundreds of bright young minds who have gone on to excel in higher education and community leadership.
+    </p>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section>
+    <h2>Our Mission & Vision</h2>
+    <div class="card">
+      <b>Our Mission</b><br>
+    To produce productive citizens
+    </div>
+    <div class="card">
+      <b>Our Vision</b><br>
+     Provision of Quality Education
+    </div>
+  </section>
+
+  <!-- Values / Facilities -->
+  <section>
+    <h2>Our Values & Facilities</h2>
+    <div class="values-container">
+      <div class="card">
+        <h3>Integrity</h3>
+        <p>We nurture honesty, respect, and responsibility in every student.</p>
+      </div>
+      <div class="card">
+        <h3>Innovation</h3>
+        <p>We encourage creativity and critical thinking across all learning areas.</p>
+      </div>
+      <div class="card">
+        <h3>Sports & Recreation</h3>
+        <p>Spacious playgrounds and facilities for a healthy and active lifestyle.</p>
+      </div>
+      <div class="card">
+        <h3>Library & Labs</h3>
+        <p>Modern library, computer, and science labs to support learning and research.</p>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:larger; margin-top:20px;"><strong>"IN EDUCATION WE INVEST"</strong></p>
+  </section>
+  <div class="gallery">
+    <img src="tophill.jpg">
+    <img src="director.jpg" height="100px">
+  </div>
+  <footer>
+    <p>
+      For any inquiries regarding Top Hill Primary School, contact the School Administration on:<br>
+      <img src="whats app logo.png" alt="WhatsApp" width="20" height="20"> 0701498154 / 0753894090<br>
+      <img src="email(0).png" alt="Email" width="20"> tophillprimary720@gmail.com
+    </p>
+    &copy; 2025 Top Hill Primary School | All rights reserved
+  </footer>
+  <script>
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

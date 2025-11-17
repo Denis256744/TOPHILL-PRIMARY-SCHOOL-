@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Top Hill Primary School – Ssagala</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7fdf7;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #008000;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #badge {
+      height: 80px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    nav.desktop {
+      display: flex;
+      justify-content: right;
+      gap: 30px;
+      font-size: larger;
+    }
+
+    nav.desktop a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #008000;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    #menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+    }
+
+    nav.mobile {
+      position: fixed;
+      top: 60px; 
+      right: -250px; 
+      width: 250px;
+      background-color: #008000;
+      flex-direction: column;
+      padding: 10px 20px;
+      gap: 10px;
+      box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+      border-radius: 0 0 0 10px;
+      z-index: 1500;
+      display: none;
+      transition: right 0.3s ease;
+    }
+
+    nav.mobile.show {
+      display: flex;
+      right: 0;
+    }
+
+    nav.mobile a {
+      padding: 10px 15px;
+      text-align: right;
+      display: block;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #008000;
+    }
+
+    .header-space {
+      height: 150px;
+    }
+
+    footer {
+      background-color: #008000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Contact content */
+    main {
+      padding: 40px 20px;
+      background-color: #f7fdf7;
+      color: #333;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    section h2, section h3 {
+      color: green;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 12px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #006b00;
+    }
+
+    @media (max-width: 768px) {
+      #badge { display: none; }
+      nav.desktop { display: none; }
+      #menu-icon { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="logo-name">
+      <img src="Badge.png" alt="School Badge" id="badge">
+      <h1 style="margin:0; font-size:1.5em; font-weight:bold;">Top Hill Primary School<br><span style="font-size:0.9em;">Ssagala – Kyotera</span></h1>
+    </div>
+    <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <nav class="desktop">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="location.html">Location</a>
+      <a href="contact.html" style="text-decoration:underline;">Contact</a>
+    </nav>
+  </div>
+
+  <nav id="nav-links" class="mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="location.html">Location</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="header-space"></div>
+
+<!-- Contact Page Content -->
+<main>
+  <section style="text-align: center;">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Feel free to reach out to us through the contact details or form below.</p>
+  </section>
+
+  <section style="background-color:#fff; padding:25px; border-radius:10px; box-shadow:0 0 8px rgba(0,0,0,0.1);">
+    <h3>School Contact Information</h3>
+    <p><strong>School Name:</strong> Top Hill Primary School – Ssagala</p>
+    <p><strong>Address:</strong> Ssagala, Uganda</p>
+    <p><strong>Phone:</strong> 0701498154 / 0753894090</p>
+    <p><strong>Email:</strong> <a href="mailto:tophill720@gmail.com" style="color: green;">tophill720@gmail.com</a></p>
+    <p><strong>Office Hours:</strong> Monday – Friday, 8:00 AM – 5:00 PM</p>
+  </section>
+
+  <section>
+    <h3>Send Us a Message</h3>
+    <form action="#" method="post">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject (optional)">
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>
+    For any inquiries regarding Top Hill Primary School, contact the School Administration on:<br>
+    <img src="whats app logo.png" alt="WhatsApp" width="20" height="20"> 0701498154 / 0753894090<br>
+    <img src="email(0).png" alt="Email" width="20"> tophillprimary720@gmail.com
+  </p>
+  &copy; 2025 Top Hill Primary School | All rights reserved
+</footer>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
